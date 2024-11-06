@@ -66,7 +66,7 @@ body {
     linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
 }
 
-.main {
+.main, .lyrics {
   top: 0;
   position: fixed;
   text-align: center;
@@ -76,6 +76,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+.lyrics {
+  display: none;
+  text-shadow: #000;
 }
 .main p {
   font-size: 12px;
