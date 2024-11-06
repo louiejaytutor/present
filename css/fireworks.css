@@ -4,6 +4,10 @@
   100% { width: var(--finalSize); opacity: 0; }
 }
 
+.fireworks {
+  display: none;
+}
+
 .firework,
 .firework::before,
 .firework::after
