@@ -23,6 +23,7 @@ body {
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
+  overflow: hidden;
 }
 
 .night {
