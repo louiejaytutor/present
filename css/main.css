@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*,
+*::after,
+*::before {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-color: #000;
+}
+
+body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--dark-color);
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.night {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  filter: blur(0.1vmin);
+  background-image: radial-gradient(
+      ellipse at top,
+      transparent 0%,
+      var(--dark-color)
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      var(--dark-color),
+      rgba(145, 233, 255, 0.2)
+    ),
+    repeating-linear-gradient(
+      220deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    repeating-linear-gradient(
+      189deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    repeating-linear-gradient(
+      148deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+}
+
+.test {
+  top: 0;
+  position: fixed;
+  text-align: center;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.test p {
+  font-size: 12px;
+}
+.test p:nth-child(3) {
+  margin-bottom: 50px;
+}
+
+.container * {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+
+
+
+
+/* button */
+.play-music {
+  color: #fff;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  animation: test 4s infinite ease-in-out;
+}
+.play-music:hover {
+  text-decoration: underline;
+}
+
+.shadow__btn {
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 7px;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  background: rgba(0, 255, 250, 0.75);
+  box-shadow: 0 0 15px rgb(0, 255, 250);
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 0 50px rgb(0, 255, 250);
+}
