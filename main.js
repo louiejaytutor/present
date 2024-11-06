@@ -62,11 +62,11 @@ function playMusic() {
 
   if (audio.paused) {
     audio.play();
-    button.innerHTML = "<i class="fas fa-pause-circle"></i> Pause";
+    button.innerHTML = "<i class='fas fa-pause-circle'></i> Pause";
   }
   else {
     audio.pause();
-    button.innerHTML = "<i class="fas fa-play-circle"></i> Play";
+    button.innerHTML = "<i class='fas fa-play-circle'></i> Play";
   }
 }
 
@@ -75,7 +75,7 @@ function stopMusic() {
   audio.currentTime = 0;
 
   stop.style.display = "none";
-  button.innerHTML = "<i class="fas fa-play-circle"></i> Play music";
+  button.innerHTML = "<i class='fas fa-play-circle'></i> Play music";
 }
 
 function backBtn() {
