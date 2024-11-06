@@ -2,7 +2,6 @@
   position: relative;
   z-index: 2;
   transform: scale(0.9);
-  overflow: hidden;
 }
 
 .flower {
