@@ -152,7 +152,7 @@
     opacity: 1;
   }
   100% {
-    transform: scale(1) translate(calc(var(--x) * 50%), calc(var(--y) * 50%));
+    transform: scale(1) translate(calc(var(--x) * 30%), calc(var(--y) * 30%));
     opacity: 0;
   }
 }
