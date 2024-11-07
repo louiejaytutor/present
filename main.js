@@ -78,6 +78,14 @@ function stopMusic() {
   button.innerHTML = "<i class='fas fa-play-circle'></i> Play";
 }
 
+function forwardMusic() {
+  audio.currentTime = audio.currentTime + 5;
+}
+
+function backwardMusic() {
+  audio.currentTime = audio.currentTime - 5;
+}
+
 function backBtn() {
   main.style.display = "flex";
   menu.style.display = "none";

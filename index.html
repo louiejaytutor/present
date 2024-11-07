@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/flowers.css">
     <link rel="stylesheet" href="css/fireworks.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <title>Present for Clouie</title>
+    <title>Simple Gift for Clouie</title>
 </head>
 <body class="container">
     <div class="night"></div>
     <div id="main" class="main">
       <h3>Hi Clouie!</h3>
-      <p>Just a simple present for you🫶</p>
+      <p>Just a simple gift for you🫶</p>
       <p>Hope you like it😊</p>
-      <button onclick="playMusic()" class="shadow__btn"><i class="fas fa-gift"></i> Click Here</button>
+      <button onclick="playMusic()" class="shadow__btn">Click Here</button>
     </div>
     <div id="flowers" class="flowers">
       <div class="flower flower--1">
@@ -325,9 +325,11 @@
       <audio id="audio" loop>
         <source src="mp3/blue.mp3" type="audio/mpeg">
       </audio>
+      <button id="backward-music" onclick="backwardMusic()"><i class="fas fa-backward"></i> Backward</button>
       <button id="play-music" onclick="playMusic()"><i class="fas fa-play-circle"></i> Play</button>
       <button id="stop-music" onclick="stopMusic()"><i class="fas fa-stop-circle"></i> Stop</button>
-      <button onclick="backBtn()"><i class="fas fa-arrow-alt-circle-left"></i> Back</button>
+      <button id="forward-music" onclick="forwardMusic()"><i class="fas fa-forward"></i> Forward</button>
+      <button onclick="backBtn()"><i class="fas fa-trash"></i> Back</button>
     </div>
     <script src="main.js"></script>
   </body>
