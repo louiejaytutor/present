@@ -74,6 +74,8 @@ function playMusic() {
     audio.pause();
     button.innerHTML = "<i class='fas fa-play-circle'></i> Resume";
   }
+
+  document.addEventListener("click", fireworksOnClick);
 }
 
 function stopMusic() {
@@ -103,4 +105,34 @@ function backBtn() {
 
   audio.pause();
   audio.currentTime = 0;
+
+  document.removeEventListener("click", fireworksOnClick);
+}
+
+function fireworksOnClick(e) {
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement("div");
+      particle.classList.add("particle");
+  
+      const size = Math.random() * 1 + 2;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+  
+      const colors = ["cyan", "pink", "yellow", "rgba(150, 150, 255, 0.9)"];
+      particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+  
+      particle.style.left = `${e.clientX}px`;
+      particle.style.top = `${e.clientY}px`;
+  
+      const angle = Math.random() * 2 * Math.PI;
+      const distance = Math.random();
+      particle.style.setProperty("--x", Math.cos(angle) * distance);
+      particle.style.setProperty("--y", Math.sin(angle) * distance);
+  
+      document.body.appendChild(particle);
+  
+      particle.addEventListener("animationend", () => {
+        particle.remove();
+      });
+    }
 }

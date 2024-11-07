@@ -134,3 +134,25 @@
   top: 60%;
   animation-delay: -0.4s;
 }
+
+
+
+.particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 200, 0, 0.9);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: explode 1s ease-out forwards;
+}
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translate(calc(var(--x) * 120px), calc(var(--y) * 120px));
+    opacity: 0;
+  }
+}
