@@ -8,7 +8,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 * {
   font-family: 'Poppins', sans-serif;
 }
@@ -80,10 +79,26 @@ body {
   align-items: center;
   height: 100vh;
 }
+.main h3 {
+  animation: float 6s ease-in-out infinite;
+}
 .lyrics {
   display: none;
-  text-shadow: #000;
+  max-width: 75%;
 }
+.lyrics p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+	0%, 100% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+}
+
 .main p {
   font-size: 12px;
 }
@@ -129,12 +144,15 @@ body {
   cursor: pointer;
   border: none;
   border-radius: 7px;
-  transition: 0.5s;
-  transition-property: box-shadow;
   background: rgba(0, 255, 250, 0.75);
-  box-shadow: 0 0 15px rgb(0, 255, 250);
+  animation: glow 3s ease-in-out infinite;
 }
 
-.shadow__btn:hover {
-  box-shadow: 0 0 50px rgb(0, 255, 250);
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgb(0, 255, 250);
+  }
+  50% {
+    box-shadow: 0 0 35px rgb(0, 255, 250);
+  }
 }
