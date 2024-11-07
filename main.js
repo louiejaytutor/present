@@ -6,6 +6,8 @@ const button = document.getElementById("play-music");
 const audio = document.getElementById("audio");
 const lyric = document.getElementById("lyrics");
 const stop = document.getElementById("stop-music");
+const forward = document.getElementById("forward-music");
+const backward = document.getElementById("backward-music");
 
 audio.addEventListener("timeupdate", updateLyrics);
 
@@ -57,6 +59,8 @@ function playMusic() {
   fireworks.style.display = "block";
   lyric.style.display = "flex";
   stop.style.display = "inline-block";
+  forward.style.display = "inline-block";
+  backward.style.display = "inline-block";
 
   audio.volume = 0.5;
 
@@ -75,6 +79,8 @@ function stopMusic() {
   audio.currentTime = 0;
 
   stop.style.display = "none";
+  forward.style.display = "none";
+  backward.style.display = "none";
   button.innerHTML = "<i class='fas fa-play-circle'></i> Play";
 }
 
