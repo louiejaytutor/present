@@ -4,7 +4,7 @@ const fireworks = document.getElementById("fireworks");
 const menu = document.getElementById("menu");
 const button = document.getElementById("play-music");
 const audio = document.getElementById("audio");
-const lyric = document.getElementById("lyrics");
+const lyric = document.getElementById("lyrics").querySelector("p");
 const stop = document.getElementById("stop-music");
 const forward = document.getElementById("forward-music");
 const backward = document.getElementById("backward-music");
@@ -24,7 +24,7 @@ const lyrics = [
   { time: 66, text: "So let me fly with you" },
   { time: 69, text: "Will you be forever with me?" },
   { time: 74, text: "" },
-  { time: 106, text: "My love will always stay by you" },
+  { time: 107, text: "My love will always stay by you" },
   { time: 112, text: "I'll keep it safe, so don't you worry a thing, I'll tell you I love you more" },
   { time: 121, text: "It's stuck with you forever, so promise you won't let it go" },
   { time: 128, text: "I'll trust the universe will always bring me to you" },
@@ -35,7 +35,9 @@ const lyrics = [
   { time: 150, text: "I'll leave my heart with your air" },
   { time: 154, text: "So let me fly with you" },
   { time: 158, text: "Will you be forever with me?" },
-  { time: 165, text: "" }
+  { time: 165, text: "" },
+  { time: 167, text: "Hope you like it Clouie🫶" },
+  { time: 172, text: "" }
 ];
 
 function updateLyrics() {
@@ -45,7 +47,7 @@ function updateLyrics() {
     return currentTime >= lyric.time && (!nextLyric || currentTime < nextLyric.time);
   });
   
-  lyric.textContent = currentLyric ? currentLyric.text : "";
+  lyric.innerHTML = currentLyric ? currentLyric.text : "";
 }
 
 onload = () => {
@@ -57,7 +59,7 @@ function playMusic() {
   menu.style.display = "inline-block";
   flowers.style.display = "block";
   fireworks.style.display = "block";
-  lyric.style.display = "flex";
+  lyric.parentElement.style.display = "flex";
   stop.style.display = "inline-block";
   forward.style.display = "inline-block";
   backward.style.display = "inline-block";
@@ -97,7 +99,7 @@ function backBtn() {
   menu.style.display = "none";
   flowers.style.display = "none";
   fireworks.style.display = "none";
-  lyric.style.display = "none";
+  lyric.parentElement.style.display = "none";
 
   audio.pause();
   audio.currentTime = 0;
