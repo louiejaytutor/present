@@ -152,7 +152,7 @@
     opacity: 1;
   }
   100% {
-    transform: scale(1) translate(calc(var(--x) * 25vh), calc(var(--y) * 25vh));
+    transform: scale(1) translate(calc(var(--x) * 15vh), calc(var(--y) * 15vh));
     opacity: 0;
   }
 }
