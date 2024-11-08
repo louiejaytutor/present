@@ -114,9 +114,9 @@ function fireworksOnClick(e) {
       const particle = document.createElement("div");
       particle.classList.add("particle");
   
-      const size = Math.random() * 1 + 2;
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
+      const size = Math.random() * 0.2 + 0.3;
+      particle.style.width = `${size}vh`;
+      particle.style.height = `${size}vh`;
   
       const colors = ["cyan", "pink", "yellow", "rgba(150, 150, 255, 0.9)"];
       particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
