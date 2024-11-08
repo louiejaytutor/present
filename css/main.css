@@ -150,9 +150,9 @@ body {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 15px rgb(0, 255, 250);
+    box-shadow: 0 0 5px rgb(0, 255, 250);
   }
   50% {
-    box-shadow: 0 0 35px rgb(0, 255, 250);
+    box-shadow: 0 0 45px rgb(0, 255, 250);
   }
 }
