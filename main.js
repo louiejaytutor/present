@@ -12,7 +12,6 @@ const backward = document.getElementById("backward-music");
 audio.addEventListener("timeupdate", updateLyrics);
 
 const lyrics = [
-  { time: 5, text: "Here's my number: 09664096369" },
   { time: 19, text: "Your morning eyes I could stare like watching stars" },
   { time: 26, text: "I could walk you by, and I'll tell without a thought" },
   { time: 32, text: "You'll be mine, would you mind if I took your hand tonight?" },
