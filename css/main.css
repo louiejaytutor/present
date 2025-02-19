@@ -102,7 +102,7 @@ body {
 .main p {
   font-size: 12px;
 }
-.main p:nth-child(4) {
+.main p:nth-child(2) {
   margin-bottom: 50px;
 }
 
